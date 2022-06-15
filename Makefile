@@ -1,9 +1,11 @@
 CXX=g++
 RM=rm -f
 
-compile:crop.cpp
-	$(CXX) crop.cpp -o testoutput2 -std=c++11 `pkg-config --cflags --libs opencv`
-run:crop.cpp
-	./testoutput2
+compile:subtask_2.cpp
+	$(CXX) subtask_2.cpp -o output -std=c++11 `pkg-config --cflags --libs opencv`
+run:subtask_2.cpp
+	./output
 clear:
-	$(RM) testoutput2
+	$(RM) output
+clear_data:
+	$(RM) graph_coor.csv
